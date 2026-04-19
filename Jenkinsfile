@@ -11,6 +11,6 @@ node {
     }
     stage("Post build actions") {
         junit '**/target/surefire-reports/*.xml'
-      emailext body: '', subject: 'Scripted Pipeline - $BUILD_DISPLAY_NAME : $BUILD_NUMBER#', to: 'testingpracticemail@gmail.com'
+      emailext body: '', subject: 'Scripted Pipeline - $JOB_NAME : $BUILD_NUMBER#', to: 'testingpracticemail@gmail.com'
     }
 }
